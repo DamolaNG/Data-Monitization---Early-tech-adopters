@@ -40,9 +40,4 @@ CREATE TABLE sku_views (
     sku       TEXT      NOT NULL
 );
 
-copy product_catalog (sku, product_name, category, launch_date) FROM 'early_tech_adopter_dataset/product_catalog.csv' WITH (FORMAT csv, HEADER true);
-copy profiles (user_id, snapshot_date, prefers_new_releases, trade_in_member) FROM 'early_tech_adopter_dataset/profiles.csv' WITH (FORMAT csv, HEADER true);
-copy orders (user_id, order_ts, sku, price) FROM 'early_tech_adopter_dataset/orders.csv' WITH (FORMAT csv, HEADER true);
-\copy sku_views (user_id, event_ts, sku) FROM 'early_tech_adopter_dataset/sku_views.csv' WITH (FORMAT csv, HEADER true);
-
 COMMIT;
