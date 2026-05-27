@@ -2,3 +2,4 @@ briefs/
 prompts/
 data/
 study.md
+load_vmo2db.sql
