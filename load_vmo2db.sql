@@ -46,8 +46,3 @@ copy orders (user_id, order_ts, sku, price) FROM 'early_tech_adopter_dataset/ord
 \copy sku_views (user_id, event_ts, sku) FROM 'early_tech_adopter_dataset/sku_views.csv' WITH (FORMAT csv, HEADER true);
 
 COMMIT;
-
-SELECT 'product_catalog' AS table_name, COUNT(*) AS rows FROM product_catalog
-UNION ALL SELECT 'profiles',  COUNT(*) FROM profiles
-UNION ALL SELECT 'orders',    COUNT(*) FROM orders
-UNION ALL SELECT 'sku_views', COUNT(*) FROM sku_views;
